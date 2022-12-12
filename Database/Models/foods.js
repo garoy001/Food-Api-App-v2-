@@ -1,19 +1,38 @@
 const mongoose = require('mongoose');
 
 const foodSchema = new mongoose.Schema({
-	foodName: {
+	foodId: {
+		type: String,
+		unique: true,
+	},
+	label: {
 		type: String,
 	},
-	foodImg: {
+	knownAs: {
 		type: String,
 	},
-	nutrition: {
-		calories: {
-			type: String,
+	nutrients: {
+		ENERC_KCAL: {
+			type: Number,
 		},
-		fat: {
-			type: String,
+		PROCNT: {
+			type: Number,
 		},
+		FAT: {
+			type: Number,
+		},
+		CHOCDF: {
+			type: Number,
+		},
+	},
+	category: {
+		type: String,
+	},
+	categoryLabel: {
+		type: String,
+	},
+	image: {
+		type: String,
 	},
 });
 

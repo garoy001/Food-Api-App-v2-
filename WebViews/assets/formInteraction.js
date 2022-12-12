@@ -21,6 +21,19 @@ function showData(element) {
 
 /////////
 
+async function axiosPost(element) {
+	await axios
+		.post('./foods', element, {
+			headers: {
+				'Content-Type': 'application/json',
+				Accept: 'application/json',
+			},
+		})
+		.then((response) => {
+			console.log('posting');
+		});
+}
+
 $form.submit((element) => {
 	element.preventDefault();
 	//render previous
@@ -34,6 +47,9 @@ $form.submit((element) => {
 	$.ajax(requestUrl).then((element) => {
 		let foodInfo = element.parsed[0].food;
 		console.log(foodInfo);
+		//
+		axiosPost(foodInfo);
+		//
 		//show the results text
 		hider.forEach((element) => {
 			showData(element);
@@ -49,6 +65,7 @@ function getData(str) {
 	$.ajax(requestUrl).then((element) => {
 		let foodInfo = element.parsed[0].food;
 		console.log(foodInfo);
+
 		//render the current search
 		renderData(foodInfo);
 	});
