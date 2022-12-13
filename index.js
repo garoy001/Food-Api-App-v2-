@@ -10,6 +10,9 @@ app.use(express.static('./WebViews/assets'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.get('/', (req, res, next) => {
+	res.redirect('/api/v1/foods');
+});
 app.use('/api/v1/foods', foodRoute);
 app.use('/api/v1/AllFoods', foodsShowRoute);
 app.use('/api/v1/Food', specificFood);

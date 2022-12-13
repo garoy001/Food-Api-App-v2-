@@ -1,6 +1,6 @@
-# Current Version - 1.0
+# Current Version - 2.0
 
-[Live Site v.1](https://foodapp2.azurewebsites.net)
+[Live Site v.2](https://foodapp2.onrender.com)
 
 [Trello Board](https://trello.com/invite/b/xTUjvd49/ATTI1f46cb97ee99f91e29d1aaf8c1965fe7B738A7D5/foodapp2)
 
