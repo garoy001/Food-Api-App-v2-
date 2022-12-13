@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/specificFood.css" />
+		<link rel="stylesheet" href="/header.css" />
+		<script src="/specificFoodInteract.js" defer></script>
+		<title>Document</title>
+	</head>
+	<body>
+		<%- include ("partials/header.ejs");%>
+		<main>
+			<h1><%=food.label%></h1>
+			<img src="<%=food.image%>" alt="<%=food.label%>" />
+			<h2>Nutrition</h2>
+			<ul class="ul_specific_food">
+				<li>Calories: <%=food.nutrients.ENERC_KCAL%></li>
+				<li>Fat: <%=food.nutrients.FAT%></li>
+			</ul>
+			<div class="functionLinks">
+				<p class="button" id="update">UPDATE</p>
+				<form
+					action="/api/v1/Food/<%=food.foodId%>?_method=PUT"
+					id="updateForm"
+					method="POST"
+					class="hidden"
+				>
+					<h4>Calories:</h4>
+					<input type="text" id="calorieUpdate" name="calories" />
+					<h4>Fat:</h4>
+					<input type="text" id="fatUpdate" name="fat" />
+					<br />
+					<br />
+					<input type="submit" id="updateSubmit" />
+				</form>
+				<br />
+				<br />
+				<br />
+				<form
+					action="/api/v1/Food/<%=food.foodId%>?_method=DELETE"
+					method="POST"
+				>
+					<input type="submit" value="DELETE" />
+				</form>
+			</div>
+		</main>
+		<footer>
+			<p id="name">Gabriel Royce - <strong>2022</strong></p>
+		</footer>
+	</body>
+</html>

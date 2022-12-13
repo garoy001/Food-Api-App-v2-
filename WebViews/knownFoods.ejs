@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/knownFood.css" />
+		<link rel="stylesheet" href="/header.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<%- include ("partials/header.ejs");%>
+		<main>
+			<h1 class="title">Foods Searched Previously</h1>
+			<div class="appContainer">
+				<% for(let food of foods) { %>
+				<div class="foodBox">
+					<a href="/api/v1/Food/<%=food.foodId%>"><h1><%=food.label %></h1></a>
+					<img src="<%=food.image%>" alt="<%=food.label%>" />
+				</div>
+				<% } %>
+			</div>
+		</main>
+	</body>
+</html>

@@ -16,6 +16,7 @@
   &nbsp;&nbsp; - Mongoose
   &nbsp;&nbsp; - Axios
   &nbsp;&nbsp; - DotEnv
+  &nbsp;&nbsp; - Method-Override
 - HTML
 - CSS
 
@@ -58,15 +59,17 @@
 
 ## Previous Versions
 
-| #     | Date      |
-| ----- | --------- |
-| 1.0.0 | 12/6/2022 |
+| #     | Date       |
+| ----- | ---------- |
+| 1.0.0 | 12/6/2022  |
+| 2.0.0 | 12/13/2022 |
 
 ---
 
 ## Changes:
 
 **v1.0.0** - Initalized
+**v2.0.0** - MVP Completed
 
 ---
 
@@ -78,5 +81,7 @@
 
 ## Wireframe
 
-![Mobile Version](Resources/img/mobile%20version.PNG)
-![Desktop Version](Resources/img/WebVersion.PNG)
+![Mobile Version](App/Resources/img/mobile%20version.PNG)
+![Desktop Version](App/Resources/img/WebVersion.PNG)
+![Main Page](App/Resources/img/mainPage.png)
+![Desktop Version](App/Resources/img/storedPage.png)

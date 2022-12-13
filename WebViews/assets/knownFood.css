@@ -1,0 +1,30 @@
+.title {
+	text-align: center;
+	text-decoration: underline;
+}
+.appContainer {
+	justify-content: center;
+	display: flex;
+}
+.foodBox {
+	margin: 10px;
+	text-align: center;
+	padding: 5px;
+	background-color: lightgray;
+}
+@media screen and (max-width: 1150px) {
+	.appContainer {
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	.foodBox {
+		max-width: 60%;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	h1 {
+		font-size: 5vw;
+	}
+}

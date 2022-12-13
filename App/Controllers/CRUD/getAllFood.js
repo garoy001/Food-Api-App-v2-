@@ -4,11 +4,13 @@
 const express = require('express');
 //
 const foodInfo = require('../../../Database/Models/foods');
-exports.deleteFood = async (foodID) => {
+
+exports.getAllFood = async () => {
 	try {
-		await foodInfo.deleteOne({ foodId: foodID });
-		console.log('food deleted succesfully');
+		let foodReturn = await foodInfo.find();
+		console.log('food retrieved succesfully');
+		return foodReturn;
 	} catch (error) {
-		console.log('food not deleted, error');
+		console.log('food not retrieved, error');
 	}
 };
