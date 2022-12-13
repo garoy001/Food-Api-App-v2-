@@ -8,7 +8,8 @@
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<title>FoodApp2</title>
 		<link rel="stylesheet" href="/style.css" />
-		<link rel="stylesheet" href="/header.css">
+		<link rel="stylesheet" href="/header.css" />
+		<link rel="stylesheet" href="/footer.css" />
 		<script src="/formInteraction.js" defer></script>
 	</head>
 	<body>
@@ -28,11 +29,9 @@
 						<h1 class="hiddenItem">Results</h1>
 						<div id="resultsBox"></div>
 					</div>
-					<footer>
-						<p id="name">Gabriel Royce - <strong>2022</strong></p>
-					</footer>
 				</div>
 			</div>
 		</main>
+		<%- include ("partials/footer.ejs");%>
 	</body>
 </html>

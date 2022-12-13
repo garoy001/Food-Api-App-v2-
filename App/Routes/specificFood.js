@@ -39,6 +39,7 @@ router.put('/:foodID', (req, res, next) => {
 	let foodID = req.params.foodID;
 	let food = req.body;
 	updateFood(food, foodID);
+	res.redirect(`/api/v1/Food/${foodID}`);
 });
 //delete
 router.delete('/:foodID', (req, res, next) => {
